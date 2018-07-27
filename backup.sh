@@ -67,4 +67,4 @@ echo "Uploading dump to $S3_BUCKET"
 
 cat ${DUMP_FILE} | aws ${AWS_ARGS} s3 cp - s3://${S3_BUCKET}/${S3_PREFIX}/${POSTGRES_DATABASE}_${DUMP_START_TIME}.sql.gz || exit 2
 
-echo "SQL backup uploaded successfully"
+echo "SQL backup uploaded successfully ${POSTGRES_DATABASE}_${DUMP_START_TIME}.sql.gz"
